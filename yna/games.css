@@ -1,0 +1,325 @@
+.games__main ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.games__container {
+  max-width: 1147px;
+  margin: 46px auto 56px;
+}
+
+.games__eclipse {
+  width: 122px;
+  height: 122px;
+  background-color: $middle-yellow-color;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.games__main {
+  max-width: 1147px;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+.games__card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 345px;
+  background-color: $yellow-bg-color;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  @include transition;
+}
+
+.games__card-text h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 900;
+  text-align: center;
+  color: $main-red-color;
+  position: relative;
+  top: 8px;
+}
+
+.games__card-text p {
+  display: none;
+}
+
+.games__main li {
+  width: 362px;
+  margin-bottom: 35px;
+  margin-right: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:hover .games__card-text h3 {
+    margin-top: 15px;
+  }
+
+  &:hover .games__card-text {
+    background-color: $white-color;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+    padding: 10px 32px 20px;
+    transform: translateY(-8px);
+
+    @include transition;
+  }
+
+  &:hover .games__card-text p {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: $main-red-color;
+    margin-top: 0;
+    max-height: 100px;
+    text-align: center;
+    overflow: auto;
+  }
+
+  &:hover .games__card-text svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover .games__card-text .games__eclipse {
+    width: 78px;
+    height: 75px;
+    background-color: #eae3cc;
+    margin: 0;
+  }
+
+  &:hover .games__card-text .games__play-mob {
+    display: block;
+    box-sizing: border-box;
+    padding: 9px 30px 9px 30px;
+    text-align: center;
+    min-width: 140px;
+    margin-bottom: 10px;
+  }
+}
+
+.games__container .accordion__controls-list::after {
+  bottom: -6px;
+}
+
+.games__play-mob {
+  display: none;
+}
+
+.games__more {
+  min-width: 166px;
+  max-width: 166px;
+  box-sizing: border-box;
+  margin-bottom: 59px;
+}
+
+@include tablet {
+  .games__main li {
+    width: 44%;
+    margin-bottom: 35px;
+    margin-right: 30px;
+    margin-left: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(even) {
+      margin-left: 0;
+    }
+  }
+}
+
+@include mobile {
+  .games__icon-pacman svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .games__icon-cup svg {
+    width: 12px;
+    height: 18px;
+  }
+
+  .games__icon-quiz svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .games__container {
+    margin: 26px auto 40px;
+  }
+
+  .games__container .accordion__controls-list::after {
+    bottom: -6px;
+  }
+
+  .games__container li .active::after {
+    bottom: -12px;
+  }
+
+  .games__container li {
+    min-width: auto;
+    font-size: 14px;
+    width: auto;
+
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:first-child a {
+      padding-right: 0;
+    }
+  }
+
+  .games__container ul {
+    margin: 0 15px;
+  }
+
+  .games__container li a {
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 24px;
+  }
+
+  .games__container a svg {
+    top: 4px;
+    left: 3px;
+  }
+
+  .games__main li {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 21px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    &:nth-child(even) {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 15px;
+    }
+
+    &:hover .games__card-text h3 {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+    &:hover .games__card-text {
+      display: flex;
+      background-color: $yellow-bg-color;
+      box-shadow: none;
+      padding: 10px 32px 10px;
+      transform: none;
+    }
+
+    &:hover .games__card-text p {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 600;
+      margin-bottom: 9px;
+      margin-top: 10px;
+      max-height: 100%;
+    }
+
+    &:hover .games__card-text svg {
+      width: 101px;
+      height: 90px;
+    }
+
+    &:hover .games__card-text .games__eclipse {
+      background-color: transparent;
+      width: 110px;
+      height: 90px;
+    }
+
+    &:hover .games__card-text .games__play-mob {
+      padding: 7px 22px 7px 39px;
+    }
+  }
+
+  .games__card-text {
+    box-sizing: border-box;
+    padding: 10px 32px 10px;
+  }
+
+  .games__card-text h3 {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .games__eclipse {
+    background-color: transparent;
+    width: 110px;
+    height: 90px;
+  }
+
+  .games__eclipse svg {
+    width: 101px;
+    height: 90px;
+  }
+
+  .games__card-text p {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-bottom: 9px;
+    margin-top: 10px;
+    text-align: center;
+    color: $main-red-color;
+  }
+
+  .games__card-text .games__play-mob {
+    padding: 7px 22px 7px 39px;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 9px;
+    left: 5px;
+    min-width: 140px;
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .games__play-mob svg {
+    top: 12px;
+    left: 15px;
+  }
+
+  .games__more {
+    min-width: 160px;
+    max-width: 166px;
+    margin-top: 10px;
+    position: relative;
+    left: 2px;
+    margin-bottom: 44px;
+  }
+
+  .games__main li:nth-child(n+4) {
+    display: none;
+  }
+}
+

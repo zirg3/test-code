@@ -1,0 +1,228 @@
+.construction-progress__wrapper {
+  margin-top: 131px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2px 15px 0;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.02em;
+
+  h1 {
+    font-family: $museo;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    color: $grey-text;
+    margin-bottom: 22px;
+  }
+
+  @include tablet {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include mobile {
+    margin-top: 62px;
+    padding: 2px 10px 0;
+
+    h1 {
+      font-size: 12px;
+    }
+  }
+}
+
+.construction-progress__img-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.construction-progress__item {
+  margin-right: 70px;
+  margin-bottom: 40px;
+  position: relative;
+  width: 530px;
+  min-height: 335px;
+  align-items: flex-end;
+  display: flex;
+  text-decoration: none;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+  }
+
+  @include laptop {
+    width: calc(46.9% - 1px);
+    height: 100%;
+    margin-right: auto;
+    min-height: 258px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @include tablet {
+    width: calc(49.2% - 1px);
+    margin-bottom: 9px;
+  }
+
+  @include mobile {
+    width: 100%;
+    min-height: 190px;
+    margin-bottom: 12px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.construction-progress__item-long {
+  width: 1133px;
+  min-height: 425px;
+  position: relative;
+  align-items: flex-end;
+  display: flex;
+  margin-top: 5px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+
+  a {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+  }
+
+  @include laptop {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @include tablet {
+    margin-top: 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    min-height: 190px;
+    margin-top: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.construction-progress__short,
+.construction-progress__long {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -1px;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.construction-progress__text,
+.construction-progress__text-long {
+  width: 100%;
+  padding: 12px 22px 14px;
+  color: $white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: $museo;
+  font-size: 18px;
+  font-weight: 300;
+  min-height: 71px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 7px 7px;
+  z-index: -1;
+
+  p {
+    margin: 0;
+    letter-spacing: 0.04em;
+  }
+
+  @include mobile {
+    font-size: 10px;
+    font-weight: 500;
+    height: 38px;
+    min-height: 38px;
+    padding: 6px 12px 6px;
+    line-height: 11px;
+  }
+}
+
+.construction-progress__btn {
+  background-color: $orange;
+  color: $white;
+  font-family: $museo;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 270px;
+  min-height: 50px;
+  border-radius: 25px;
+  text-decoration: none;
+  padding: 3px 45px;
+  text-align: center;
+  border: 1px solid $orange;
+
+  @include transition;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &:hover {
+    border: 1px solid $orange;
+    background-color: $white;
+    color: $orange;
+
+    @include transition;
+  }
+
+  @include tablet {
+    font-size: 12px;
+    width: 165px;
+    min-height: 33px;
+    padding: 3px 20px;
+  }
+
+  @include mobile {
+    font-size: 12px;
+    min-height: 35px;
+    height: 35px;
+    width: 180px;
+    padding: 3px 27px;
+    margin: 10px auto;
+  }
+}
